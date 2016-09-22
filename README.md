@@ -1,5 +1,7 @@
 # Boggle Board
 
+[![Build Status](https://api.travis-ci.org/xingxing/boggle_board.svg)](https://travis-ci.org/xingxing/boggle_board)
+
 It's implementing of boggle solver in Elixir. :)
 
 [Boggle Sample](http://www.boggled.org/sample.gif)

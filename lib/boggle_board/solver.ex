@@ -40,12 +40,10 @@ defmodule BoggleBoard.Solver do
 
   @doc """
   iex> BoggleBoard.Solver.to_boggle_map("RNES MOLZ KIEC EBNN")
- %{          {0, 0} => "R", {0, 1} => "M", {0, 2} => "K", {0, 3} => "E",
+ %{{0, 0} => "R", {0, 1} => "M", {0, 2} => "K", {0, 3} => "E",
              {1, 0} => "N", {1, 1} => "O", {1, 2} => "I", {1, 3} => "B",
              {2, 0} => "E", {2, 1} => "L", {2, 2} => "E", {2, 3} => "N",
-             {3, 0} => "S", {3, 1} => "Z", {3, 2} => "C", {3, 3} => "N"
-
-  }
+             {3, 0} => "S", {3, 1} => "Z", {3, 2} => "C", {3, 3} => "N"}
   """
   def to_boggle_map(boggle) do
     boggle
