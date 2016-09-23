@@ -28,6 +28,7 @@ defmodule BoggleBoard.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    [{:retrieval, "~> 0.9.1"}]
+    [{:retrieval, "~> 0.9.1"},
+     {:benchfella, "~> 0.3.0"}]
   end
 end

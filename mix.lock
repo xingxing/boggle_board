@@ -1,1 +1,2 @@
-%{"retrieval": {:hex, :retrieval, "0.9.1", "0e9924729d0ed12a38089e8e9ce1c6564d0adf9f83eb0172a3f3c018aa27f2f9", [:mix], []}}
+%{"benchfella": {:hex, :benchfella, "0.3.3", "bbde48b5fe1ef556baa7ad933008e214e050e81ddb0916350715f5759fb35c0c", [:mix], []},
+  "retrieval": {:hex, :retrieval, "0.9.1", "0e9924729d0ed12a38089e8e9ce1c6564d0adf9f83eb0172a3f3c018aa27f2f9", [:mix], []}}
