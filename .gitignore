@@ -15,3 +15,7 @@ erl_crash.dump
 
 # Also ignore archive artifacts (built via "mix archive.build").
 *.ez
+
+# Also ignore benchmark snapshots and graphs (benchmark via "mix bench")
+/bench/snapshots
+/bench/graphs
