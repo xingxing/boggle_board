@@ -1,5 +1,25 @@
 defmodule BoggleBoard.Solver do
+
+  use GenServer
   require BoggleBoard.Dictionary
+
+  @name __MODULE__
+
+  # API
+
+  def start_link do
+    GenServer.start_link(__MODULE__, :ok, name: @name)
+  end
+
+  def solve(boggle) do
+    GenServer.call(@name, {:solve, boggle})
+  end
+
+  # Callbacks
+
+  def init(:ok), do: {:ok, nil}
+
+  def handle_call({:solve, boggle}, _from, nil), do: {:reply, _solve(boggle), nil}
 
   def find_words(boggle, start_position, visited, str, words) do
     visited = update_in(visited, [start_position], fn(_) -> true end)
@@ -20,7 +40,7 @@ defmodule BoggleBoard.Solver do
     end
   end
 
-  def solve(boggle) do
+  def _solve(boggle) do
     boggle = to_boggle_map(boggle)
 
     boggle
@@ -40,7 +60,7 @@ defmodule BoggleBoard.Solver do
 
   @doc """
   iex> BoggleBoard.Solver.to_boggle_map("RNES MOLZ KIEC EBNN")
- %{{0, 0} => "R", {0, 1} => "M", {0, 2} => "K", {0, 3} => "E",
+  %{{0, 0} => "R", {0, 1} => "M", {0, 2} => "K", {0, 3} => "E",
              {1, 0} => "N", {1, 1} => "O", {1, 2} => "I", {1, 3} => "B",
              {2, 0} => "E", {2, 1} => "L", {2, 2} => "E", {2, 3} => "N",
              {3, 0} => "S", {3, 1} => "Z", {3, 2} => "C", {3, 3} => "N"}
